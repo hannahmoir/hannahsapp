@@ -13,3 +13,52 @@
  *= require_tree .
  *= require_self
  */
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+
+/*Navigation Bar*/
+
+.navbar {
+  z-index: 1;
+  background-color: #FF832B;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.navbar a {
+  color:#FFF !important;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 600ms;
+  -webkit-transition: color 600ms;
+}
+
+.WoodRings a:hover {
+  color: #000 !important;
+  text-decoration: none;
+}
+.page-wrap {
+  min-height: 100%;
+  margin-top: 90px;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+.site-footer, .page-wrap:after {
+  height: 142px; 
+}
+.site-footer {
+  background: black;
+  color: white;
+  text-align: center;
+}
