@@ -39,7 +39,7 @@ html, body {
   -webkit-transition: color 600ms;
 }
 
-.WoodRings a:hover {
+.navbar a:hover {
   color: #000 !important;
   text-decoration: none;
 }
@@ -52,6 +52,10 @@ html, body {
 .page-wrap:after {
   content: "";
   display: block;
+}
+
+h1, h2 {
+ text-align: center;
 }
 
 .site-footer, .page-wrap:after {
