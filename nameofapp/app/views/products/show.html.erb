@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<div class = "container">
+  <div class = "prodinfo">
+    <p>
+      <strong>Name:</strong>
+      <%= @product.name %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%= @product.description %>
+    </p>
+  </div><!--end prodinfo-->
+  <div class = "prodimg">
+    <p>
+      <strong>Image url:</strong>
+      <%= @product.image_url %>
+    </p> 
+  </div><!--end prodimg-->
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
+</div><!--end container-->
+
