@@ -1,24 +1,26 @@
 <div class="container">
   <h1>Contact Us</h1>
 
-  <%= form_tag() do %>
-    <div class="row">
-      <div class="col-xs-8 col-sm-4">
-        <div class="form-group">
-          <%= label_tag :name, "Name *" %>
-          <%= text_field_tag :name, nil, class:"form-control", placeholder:"Name", :required => true %>
-        </div>
-        <div class="form-group">
-          <%= label_tag :email, "Email Address *" %>
-          <%= text_field_tag :email, nil, class: "form-control", placeholder:"your-email@your.domain", type:'email', :required => true%>
-        </div>
-        <div class="form-group">
-          <%= label_tag :message %>
-          <%= text_area_tag :message, nil, class: "form-control", placeholder:"Enter Message" %>
-        </div>
+  <%= flash[:notice] %>
+
+  <%= form_tag("/static_pages/thank_you") do %>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= label_tag :name %>
+        <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+      </div>      
+      <div class="form-group">
+        <%= label_tag :email, "Email Address" %>
+        <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
       </div>
+      <div class="form-group">
+        <%= label_tag :message %>
+        <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+      </div>      
     </div>
-    <%= submit_tag "Send", class:"btn btn-default" %>
+  </div>
+  <%= submit_tag "Send", class:"btn btn-default" %>  
   <% end %>
 </div>
 
