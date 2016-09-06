@@ -44,12 +44,23 @@
           <li><%= link_to "Contact", static_pages_contact_path %></li>
           <li><%= link_to "Products", products_path %></li>
         </ul>
+        <ul class="nav pull-right">
+          <li>
+          <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <% else %>
+            <%= link_to('Login', new_user_session_path) %>
+          <% end %>
+          </li>
+        </ul>
       </div>
       <!-- nav -->
     </div>
     <!-- end nav container-->
   </nav>
     <!-- end navbar-->
+  <p class="notice"><%= notice %></p>                                                                                        
+  <p class="alert"><%= alert %></p> 
   <div class="page-wrap">
   <%= yield %>
  
