@@ -50,17 +50,13 @@ html, body {
   /* equal to footer height */
   margin-bottom: -142px; 
 }
-.page-wrap:after {
-  content: "";
-  display: block;
-}
 
 h1, h2, h3 {
  text-align: center;
  font-family: 'Roboto Condensed', sans-serif;
 }
 
-.site-footer, .page-wrap:after {
+.site-footer {
   height: 142px; 
 }
 .site-footer {
